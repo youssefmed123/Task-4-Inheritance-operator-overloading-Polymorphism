@@ -21,7 +21,7 @@
             bool success = base.Deposit(amount);
             if (success && amount >= BonusThreshold)
             {
-                base.Deposit(BonusAmount); // Deposit bonus
+                base.Deposit(BonusAmount);
             }
             return success;
         }
@@ -44,7 +44,7 @@
 
         public void ResetWithdrawalCount()
         {
-            withdrawalCount = 0; // Resets the count for a new year
+            withdrawalCount = 0;
         }
 
         public double GetInterestRate()
