@@ -2,12 +2,12 @@
 {
     public class TrustAccount : Account
     {
-        private double interestRate;
-        private int withdrawalCount;
-        private const int MaxWithdrawalsPerYear = 3;
-        private const double MaxWithdrawalPercentage = 0.20;
-        private const double BonusThreshold = 5000.00;
-        private const double BonusAmount = 50.00;
+        double interestRate;
+        int withdrawalCount;
+        const int MaxWithdrawalsPerYear = 3;
+        const double MaxWithdrawalPercentage = 0.20;
+        const double BonusThreshold = 5000.00;
+        const double BonusAmount = 50.00;
 
         public TrustAccount(string name = "Account", double balance = 0.0, double interestRate = 0.02)
             : base(name, balance)
