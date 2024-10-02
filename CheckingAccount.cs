@@ -2,7 +2,7 @@
 {
     public class CheckingAccount : Account
     {
-        const double WithdrawalFee = 1.50;
+       private const double WithdrawalFee = 1.50;
 
         public CheckingAccount(string name = "Account", double balance = 0.0)
             : base(name, balance)
