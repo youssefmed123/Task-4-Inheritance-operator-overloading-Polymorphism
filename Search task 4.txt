@@ -1,0 +1,37 @@
+first search task :
+
+couldnt do it 
+
+Second search task :
+
+namespace search_task_4
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Enter a string:");
+            string input = Console.ReadLine();
+
+            // Check for vowels and handle the exception
+            string result = CheckForVowels(input);
+            Console.WriteLine(result);
+        }
+
+        static string CheckForVowels(string str)
+        {
+            // Convert the string to lowercase for case-insensitive comparison
+            str = str.ToLower();
+
+            // Check for vowels
+            if (!str.Contains('a') && !str.Contains('e') && !str.Contains('i') &&
+                !str.Contains('o') && !str.Contains('u'))
+            {
+                // Throw an exception if no vowels are found
+                throw new Exception("The string does not contain any vowels.");
+            }
+
+            return "The string contains vowels.";
+        }
+    }
+}
