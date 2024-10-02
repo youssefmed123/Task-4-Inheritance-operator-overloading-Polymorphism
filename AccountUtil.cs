@@ -10,7 +10,7 @@ public static class AccountUtil
         Console.WriteLine("\n=== Accounts ==========================================");
         foreach (var acc in accounts)
         {
-            Console.WriteLine(acc.name);
+            Console.WriteLine(acc.name); //error 
         }
     }
 
@@ -20,9 +20,9 @@ public static class AccountUtil
         foreach (var acc in accounts)
         {
             if (acc.Deposit(amount))
-                Console.WriteLine($"Deposited {amount} to {acc.name}");
+                Console.WriteLine($"Deposited {amount} to {acc.name}"); //error
             else
-                Console.WriteLine($"Failed Deposit of {amount} to {acc.name}");
+                Console.WriteLine($"Failed Deposit of {amount} to {acc.name}"); //error
         }
     }
 
@@ -32,9 +32,9 @@ public static class AccountUtil
         foreach (var acc in accounts)
         {
             if (acc.Withdraw(amount))
-                Console.WriteLine($"Withdrew {amount} from {acc.name}");
+                Console.WriteLine($"Withdrew {amount} from {acc.name}"); //error
             else
-                Console.WriteLine($"Failed Withdrawal of {amount} from {acc.name}");
+                Console.WriteLine($"Failed Withdrawal of {amount} from {acc.name}"); //error
         }
     }
 }
