@@ -6,8 +6,7 @@ public static class AccountUtil
     // Utility helper functions for Account class
     
     public static void Display(List<Account> accounts)
-    {
-        Console.ForegroundColor = ConsoleColor.Red;
+    {      
         Console.WriteLine("\n=== Accounts ==========================================");
         foreach (var acc in accounts)
         {
@@ -16,8 +15,7 @@ public static class AccountUtil
     }
 
     public static void Deposit(List<Account> accounts, double amount)
-    {
-        Console.ForegroundColor= ConsoleColor.Blue;
+    {        
         Console.WriteLine("\n=== Depositing to Accounts =================================");
         foreach (var acc in accounts)
         {
@@ -29,8 +27,7 @@ public static class AccountUtil
     }
 
     public static void Withdraw(List<Account> accounts, double amount)
-    {
-        Console.ForegroundColor=ConsoleColor.Cyan;
+    {      
         Console.WriteLine("\n=== Withdrawing from Accounts ==============================");
         foreach (var acc in accounts)
         {
