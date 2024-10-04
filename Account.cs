@@ -47,7 +47,7 @@
        }
         public override string ToString()
         {
-            return $"{name}: {balance $}";
+            return $"{name}: {balance} $";
         }
     }
 }
