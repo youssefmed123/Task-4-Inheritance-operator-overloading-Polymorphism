@@ -1,6 +1,59 @@
 first search task :
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter a list of integers (separated by spaces):");        
+        string input = Console.ReadLine();
 
-couldnt do it 
+        try
+        {            
+            string[] numbersAsStrings = input.Split(' ');
+            int[] uniqueNumbers = new int[numbersAsStrings.Length]; 
+            int uniqueCount = 0; 
+            for (int i = 0; i < numbersAsStrings.Length; i++)
+            {
+               
+                if (int.TryParse(numbersAsStrings[i], out int number))
+                {
+                    
+                    bool isDuplicate = false;
+                    for (int j = 0; j < uniqueCount; j++)
+                    {
+                        if (uniqueNumbers[j] == number)
+                        {
+                            isDuplicate = true; 
+                            break;
+                        }
+                    }
+
+                    if (isDuplicate)
+                    {
+                        throw new Exception($"Duplicate number found: {number}");
+                    }
+                    else
+                    {
+                        
+                        uniqueNumbers[uniqueCount] = number;
+                        uniqueCount++; 
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid input: '{numbersAsStrings[i]}' is not a valid integer.");
+                }
+            }
+
+            Console.WriteLine("All numbers are unique!");
+        }
+        catch (Exception ex)
+        {           
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+
+
 
 Second search task :
 
